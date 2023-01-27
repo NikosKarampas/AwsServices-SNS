@@ -12,15 +12,15 @@ public class CustomerService : ICustomerService
 {
     private readonly ICustomerRepository _customerRepository;
     private readonly IGitHubService _gitHubService;
-    private readonly ISqsMessenger _sqsMessenger;
+    private readonly ISnsMessenger _sqsMessenger;
 
     public CustomerService(ICustomerRepository customerRepository,
         IGitHubService gitHubService,
-        ISqsMessenger sqsMessenger)
+        ISnsMessenger snsMessenger)
     {
         _customerRepository = customerRepository;
         _gitHubService = gitHubService;
-        _sqsMessenger = sqsMessenger;
+        _sqsMessenger = snsMessenger;
     }
 
     public async Task<bool> CreateAsync(Customer customer)
@@ -43,7 +43,7 @@ public class CustomerService : ICustomerService
         var response = await _customerRepository.CreateAsync(customerDto);
         if (response)
         {
-            await _sqsMessenger.SendMessageAsync(customer.ToCustomerCreatedMessage());
+            await _sqsMessenger.PublishMessageAsync(customer.ToCustomerCreatedMessage());
         }
 
         return response;
@@ -75,7 +75,7 @@ public class CustomerService : ICustomerService
         var response = await _customerRepository.UpdateAsync(customerDto);
         if (response)
         {
-            await _sqsMessenger.SendMessageAsync(customer.ToCustomerUpdatedMessage());
+            await _sqsMessenger.PublishMessageAsync(customer.ToCustomerUpdatedMessage());
         }
 
         return response;
@@ -86,7 +86,7 @@ public class CustomerService : ICustomerService
         var response = await _customerRepository.DeleteAsync(id);
         if (response)
         {
-            await _sqsMessenger.SendMessageAsync(new CustomerDeleted
+            await _sqsMessenger.PublishMessageAsync(new CustomerDeleted
             {
                 Id = id
             });
