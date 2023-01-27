@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6p/pfPTUHMnmfzPH69czvmoyQ+UUhn0iK+FClaDrCnYR2GRO54jjIUV6yi7BFu4XFZFwg8PJLuqZJiAclo//Rg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NikosKarampas\\Aws Services\\SNS\\SnsPublisher\\SnsPublisher.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NikosKarampas\\.nuget\\packages\\awssdk.core\\3.7.103.23\\awssdk.core.3.7.103.23.nupkg.sha512",
+    "C:\\Users\\NikosKarampas\\.nuget\\packages\\awssdk.simplenotificationservice\\3.7.100.62\\awssdk.simplenotificationservice.3.7.100.62.nupkg.sha512"
+  ],
+  "logs": []
+}

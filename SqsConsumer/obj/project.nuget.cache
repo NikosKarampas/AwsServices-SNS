@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "TuYf4B2UrHqk5ImGN0dC1IDjNojx/n0u4HooXhyVZEp4DGWEzM74GtZPh8qbU5bTl9WtOTPzaWCl7FqMtD8T7w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NikosKarampas\\Aws Services\\SNS\\SqsConsumer\\SqsConsumer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NikosKarampas\\.nuget\\packages\\awssdk.core\\3.7.103.24\\awssdk.core.3.7.103.24.nupkg.sha512",
+    "C:\\Users\\NikosKarampas\\.nuget\\packages\\awssdk.sqs\\3.7.100.62\\awssdk.sqs.3.7.100.62.nupkg.sha512"
+  ],
+  "logs": []
+}
